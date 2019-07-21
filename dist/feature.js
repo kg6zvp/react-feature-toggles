@@ -42,12 +42,14 @@ var Feature = function Feature(_ref) {
       lineNumber: 13
     }
   }, function (features) {
+    console.log('features', JSON.stringify(features, null, 2));
+    console.log('typeof features', typeof features);
     var Component = features.includes(name) ? activeComponent : inactiveComponent;
     return activeComponent ? _react.default.createElement(Component, {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 18
+        lineNumber: 20
       }
     }) : children({
       features: features
