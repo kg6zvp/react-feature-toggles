@@ -12,6 +12,8 @@ export const Feature = ({
 }) => (
   <Consumer>
     {features => {
+      console.log('features', JSON.stringify(features, null, 2))
+      console.log('typeof features', typeof features)
       const Component = features.includes(name)
         ? activeComponent
         : inactiveComponent;
